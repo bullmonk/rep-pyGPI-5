@@ -1,5 +1,5 @@
 # pyGPI5 fork
-~NOTE~ this is a fork from original [repo: pyGPI5](https://github.com/srkaeppler/pyGPI5)
+**NOTE** this is a fork from original [repo: pyGPI5](https://github.com/srkaeppler/pyGPI5)
 
 ## Necessary Changes Needed For Local Run
 
@@ -56,3 +56,23 @@ go to `/Models/nrlmsise00`, then `make clean`, then `make`.
     ```
     make mkso
     ```
+
+## Package Environment
+
+### Jupyter Notebook
+`.ipynb` is a file suffix for jupyter notebook files. Which records python code and block running results in the same file. One will need jupyter installed in working environemnt to open a live IDE so that he/she can load and edit this file.
+
+### A working environment.
+I've attached a working environment skeleton file `environment.yml`. So that you can get rid of figuring out which packages to install and install them one by one. As long as you have `miniconda` or `anaconda` [installed in your machine](https://docs.anaconda.com/anaconda/install/silent-mode/), you can install the environment by
+```
+conda env create -f environment.yml
+```
+you will have a `test` environment available. Once activated, you are ready to go. You need activate this `test` environment everytime you run.
+```
+conda activate test
+```
+The last step is to open up a jupyter ide, so that you can edit/run.
+```
+jupyter notebook --no-browser --port=8080
+```
+A ide server will be up and running on your `localhost:8080`.
