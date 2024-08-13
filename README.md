@@ -5,7 +5,7 @@
 
 ### 1. change 2 directories' values in `Models/MSIS.py`
 
-from 
+at line 128, change from 
 ```
 def __init__(self):
     self.geophys_dir = '/Users/srkaeppler/research/data/AFOSR_Eregion_Conductivity/Models/AP_KP'
@@ -49,5 +49,10 @@ go to `/Models/nrlmsise00`, then `make clean`, then `make`.
     ```
     make clean
     make mkf2py
+    ```
+    then change the newly name `iri2016.cpython-311-x86_64-linux-gnu.so` (yours might look differently) into `iri2016.so`.
+
+    rebuild `mkso` again
+    ```
     make mkso
     ```
